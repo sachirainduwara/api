@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachiya API Store</title>
+    <title>Sachiya API Store - Premium 150+ APIs</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
@@ -45,27 +45,27 @@
 <body class="min-h-screen flex flex-col items-center justify-between p-4 md:p-8">
 
     <!-- Header Section -->
-    <header class="w-full max-w-6xl mx-auto text-center my-6">
+    <header class="w-full max-w-7xl mx-auto text-center my-6">
         <div class="inline-block p-2 px-4 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-3">
-            <i class="fa-solid fa-bolt mr-2"></i> Powered by Sachiya Tech
+            <i class="fa-solid fa-bolt mr-2"></i> Powered by Sachiya Tech | 150+ Active APIs
         </div>
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Sachiya API Store
         </h1>
         <p class="text-slate-400 mt-2 max-w-xl mx-auto text-sm md:text-base">
-            Explore 100+ Premium AI, Downloader, Scraper & Entertainment API Services. Click to Generate Key instantly!
+            Explore 150+ Downloaders, AI, Search, Media & Tools API Services. Click to Generate & Save Permanent Keys!
         </p>
         
         <!-- Search Bar -->
         <div class="mt-6 max-w-md mx-auto relative">
             <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-            <input type="text" id="searchInput" placeholder="Search API services..." 
+            <input type="text" id="searchInput" placeholder="Search 150+ APIs (e.g., tiktok, gpt, search, anime)..." 
                 class="w-full pl-11 pr-4 py-3 rounded-xl glass text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all placeholder:text-slate-500">
         </div>
     </header>
 
     <!-- Main Grid Container -->
-    <main class="w-full max-w-6xl mx-auto my-4 flex-grow">
+    <main class="w-full max-w-7xl mx-auto my-4 flex-grow">
         <div id="apiGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
     </main>
 
@@ -82,10 +82,48 @@
 
     <!-- JavaScript Logic -->
     <script>
+        // Services 150+ (Downloaders, Tools, Search, AI, Media, etc.)
         const services = [
+            // Downloaders
+            "TikTok Downloader", "Instagram Downloader", "YouTube Video DL", "Facebook Downloader", "Twitter Video DL",
+            "Pinterest Downloader", "Spotify Downloader", "SoundCloud DL", "MediaFire DL", "Mega.nz DL",
+            "Vimeo Downloader", "Dailymotion DL", "Reddit Video DL", "Twitch Clip DL", "Snapchat Story DL",
+            "Threads Video DL", "CapCut Template DL", "Likee Downloader", "ShareChat DL", "SnapTik Engine",
+            
+            // AI & Chatbots
             "OpenAI GPT-4o", "Claude 3.5 Sonnet", "Google Gemini Pro", "DeepSeek V3", "Mistral Large",
-            "YouTube Downloader API", "TikTok No-Watermark API", "Instagram Video Downloader", "Facebook Media API",
-            "XNXX Search & Video API", "Pornhub Stream API", "XVideos Downloader", "RedTube Media API"
+            "Llama 3.3 70B", "Groq Cloud API", "Perplexity Sonar", "Cohere Command", "HuggingFace API",
+            "Midjourney Gen", "Stable Diffusion", "ElevenLabs TTS", "Whisper Audio", "Leonardo AI",
+            "Runway Gen-2", "Suno Music API", "Udio Audio Gen", "Pika Labs API", "DeepFace Live",
+
+            // Search & Web Scrapers
+            "Google Search API", "Bing Search API", "DuckDuckGo API", "Wikipedia Search", "YouTube Search API",
+            "GitHub User Search", "Reddit Post Scraper", "Medium Article DL", "Quora Q&A Scraper", "IMDb Movie Search",
+            "TMDB Movie API", "Goodreads Books API", "Steam Game Search", "AppStore Search API", "PlayStore Search",
+            "Torrent Search API", "Lyrics Finder API", "Anime Search API", "Manga Reader API", "Wallpaper Search",
+
+            // Social Media Tools & Stalkers
+            "TikTok Stalker", "Instagram Stalker", "GitHub Stalker", "TrueCaller Lookup", "IP Geolocation",
+            "Domain WHOIS API", "SSL Checker API", "QR Code Generator", "ShortLink Generator", "Password Generator",
+            "Base64 Encoder/Decoder", "JSON Formatter", "HTML to PDF", "Screenshot Capture", "EXIF Data Extractor",
+
+            // Media & Editing Tools
+            "Image Background Remove", "Image Upscaler HD", "Image Compressor", "Video to Audio Converter", "Audio Cutter API",
+            "Watermark Remover", "OCR Text Extractor", "Barcode Scanner", "Color Palette Gen", "Meme Generator API",
+            "Sticker Maker API", "GIF Search Giphy", "Unsplash HD Photos", "Pexels Video API", "Pixabay Media API",
+
+            // Entertainment & Fun
+            "Anime Quotes API", "Joke Generator API", "Fact Generator", "Riddle API", "Horoscope API",
+            "Love Calculator", "Matrix Text Gen", "ASCII Art Generator", "Truth or Dare API", "Advice Slip API",
+
+            // Developer & Cloud Tools
+            "Temp Mail Generator", "Random User Gen", "JSONPlaceholder API", "Weather Forecast API", "Exchange Rate API",
+            "CoinMarketCap API", "Binance Live API", "CoinGecko Crypto", "NewsAPI Org", "NASA Astronomy APOD",
+            "Country Info API", "Dictionary API", "Translate Google API", "Urban Dictionary", "Pokemon API",
+            
+            // Extra Tools & Utilities
+            "Minecraft Server Ping", "Roblox User Info", "Steam Profile Check", "Discord ID Lookup", "Telegram Chat Tools",
+            "WhatsApp Link Gen", "HTML Minifier", "CSS Beautifier", "JS Obfuscator", "SQL Query Builder"
         ];
 
         const grid = document.getElementById('apiGrid');
@@ -98,7 +136,7 @@
             const filtered = services.filter(service => service.toLowerCase().includes(filter.toLowerCase()));
             
             if(filtered.length === 0) {
-                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500">No API services found.</div>`;
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500">No API services found matching your search.</div>`;
                 return;
             }
 
@@ -128,6 +166,7 @@
             });
         }
 
+        // සැබැවින්ම ඩේටාබේස් එකට කනෙක්ට් වී Key එක ලබාගෙන ක්ලිප්බෝඩ් එකට කොපි කිරීම
         async function generateAndCopy(index, serviceName) {
             try {
                 const response = await fetch('/api/generate', {
@@ -143,7 +182,8 @@
                     const keyElement = document.getElementById(`key-text-${index}`);
                     keyElement.innerText = generatedKey;
 
-                    navigator.clipboard.writeText(generatedKey);
+                    // Clipboard එකට කොපි කිරීම
+                    await navigator.clipboard.writeText(generatedKey);
 
                     const cardElement = document.getElementById(`card-${index}`);
                     cardElement.classList.add('animate-minimize');
@@ -152,9 +192,12 @@
                     toastMsg.innerText = `${serviceName} Key Saved & Copied!`;
                     toast.classList.remove('translate-y-20', 'opacity-0');
                     setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 2500);
+                } else {
+                    alert("Error generating key from database.");
                 }
             } catch (error) {
                 console.error("Error generating key:", error);
+                alert("Server connection error!");
             }
         }
 
